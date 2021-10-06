@@ -15,26 +15,21 @@
 <body>
     <main>
         <h1>Choose Your Pokémon!</h1>
-        <section class="select">
-            <div id="top-row"> <!-- organization placeholder -->
-                <label>
-                    <input type="radio" name="rps" id="rock" value="rock">
-                    <img src="https://img.pokemondb.net/sprites/sword-shield/normal/rowlet.png" alt="Rowlet">
-                </label>
-            </div>
-            <div id="bottom-row"> <!-- organization placeholder -->
-                <label>
-                    <input type="radio" name="rps" id="paper" value="paper">
-                    <img src="https://img.pokemondb.net/sprites/sword-shield/normal/litten.png" alt="Litten">
-                </label>
-
-                <label>
-                    <input type="radio" name="rps" id="scissors" value="scissors">
-                    <img src="https://img.pokemondb.net/sprites/sword-shield/normal/popplio.png" alt="Popplio">
-                </label>
-            </div>
+        <section id="select-pokemon">
+            <label>
+                <input type="radio" name="rps" id="rock" value="rock">
+                <img src="https://img.pokemondb.net/sprites/sword-shield/normal/rowlet.png" alt="Rowlet">
+            </label>
+            <label>
+                <input type="radio" name="rps" id="paper" value="paper">
+                <img src="https://img.pokemondb.net/sprites/sword-shield/normal/litten.png" alt="Litten">
+            </label>
+            <label>
+                <input type="radio" name="rps" id="scissors" value="scissors">
+                <img src="https://img.pokemondb.net/sprites/sword-shield/normal/popplio.png" alt="Popplio">
+            </label>
         </section>
-        
+
         <p id="error" class="hidden">You have to choose a Pokémon!</p>
 
         <button id="play">Attack!</button>
