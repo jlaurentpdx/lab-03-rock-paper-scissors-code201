@@ -3,9 +3,9 @@
     src: url('../assets/pokemon-gb-font.ttf');
 }
 
-input[type=radio] {
-    /* display: none; */
-}
+/* input[type=radio] {
+    display: none;
+} */
 
 body {
     font-family: 'Pokemon-GB', Arial, Helvetica, sans-serif;
