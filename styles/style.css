@@ -64,6 +64,18 @@ footer {
     padding: 10px;
 }
 
+.green-text {
+    color: lightgreen;
+}
+
+.red-text {
+    color: lightsalmon;
+}
+
+.blue-text {
+    color: lightskyblue;
+}
+
 #error {
     color: red;
 }

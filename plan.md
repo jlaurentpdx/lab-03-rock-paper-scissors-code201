@@ -15,4 +15,3 @@
 * button click
     * generate a random throw (-1, 0, 1)
     * get user's input
-    * 
