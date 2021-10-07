@@ -1,4 +1,4 @@
-import { doesUserWin, getRandomChoice } from "./utilities.js";
+import { doesUserWin, getRandomChoice } from './utilities.js';
 
 const playButton = document.getElementById('play-button');
 const result = document.getElementById('result');
@@ -15,8 +15,8 @@ let losses = 0;
 let ties = 0;
 
 playButton.addEventListener('click', () => {
-    const chosen = document.querySelector('input[type=radio]:checked')
-    if(!chosen) {
+    const chosen = document.querySelector('input[type=radio]:checked');
+    if (!chosen) {
         return error.classList.remove('hidden');
     }
     error.classList.add('hidden');
@@ -34,13 +34,13 @@ playButton.addEventListener('click', () => {
             charImg.classList.add('win');}
         else if (winner === 'water') {
             squiImg.classList.add('win');}
-        }
+    };
 
     if (doesUserWin(userChoice, cpuChoice) === 'tie'){
         ties++; tieCount.textContent = ties; 
-        result.textContent = 'You tied!'
+        result.textContent = 'You tied!';
         result.style.color = 'lightgray';
-        applyAnimation(null)
+        applyAnimation(null);
     } else if (doesUserWin(userChoice, cpuChoice) === 'win') {
         wins++; winCount.textContent = wins; 
         result.textContent = 'You won!';
@@ -52,6 +52,6 @@ playButton.addEventListener('click', () => {
         result.style.color = 'red';
         applyAnimation(cpuChoice);
     }
-})
+});
 
 

@@ -46,6 +46,44 @@ footer {
     padding: 10px;
 }
 
+.icon {
+    color: darkslategrey;
+}
+
+.green-text {
+    color: lightgreen;
+}
+
+.red-text {
+    color: lightsalmon;
+}
+
+.blue-text {
+    color: lightskyblue;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.win {
+    animation: bounce;
+    animation-duration: 1s;
+}
+
+.tie {
+    animation: shake;
+    animation-duration: 1s;
+}
+
+.bounce {
+    animation-name: bounce;
+}
+
+.shake {
+    animation-name: shake;
+}
+
 #grass-icon {
     background-color: lightgreen;
     border-radius: 5px;
@@ -64,20 +102,9 @@ footer {
     padding: 10px;
 }
 
-.green-text {
-    color: lightgreen;
-}
-
-.red-text {
-    color: lightsalmon;
-}
-
-.blue-text {
-    color: lightskyblue;
-}
-
 #error {
     color: red;
+    font-size: smaller;
 }
 
 #play-button {
@@ -97,26 +124,4 @@ footer {
     grid-template-rows: auto;
     justify-content: center;
     justify-items: center;
-}
-
-.hidden {
-    display: none;
-}
-
-.win {
-    animation: bounce;
-    animation-duration: 1s;
-}
-
-.tie {
-    animation: shake;
-    animation-duration: 1s;
-}
-
-.bounce {
-    animation-name: bounce;
-}
-
-.shake {
-    animation-name: shake;
 }
