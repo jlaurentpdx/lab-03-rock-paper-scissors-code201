@@ -3,18 +3,50 @@
     src: url('../assets/pokemon-gb-font.ttf');
 }
 
-/* input[type=radio] {
+input[type=radio] {
     display: none;
-} */
+}
+
+input[type=radio]:checked + img {
+    filter: grayscale(0%);
+}
 
 body {
     font-family: 'Pokemon-GB', Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
+img {
+    filter:grayscale(100%);
+    width: 20vw;
+}
+
+footer {
+    font-size: 0.7rem;
+    bottom: 0;
+    text-align: right;
+    padding: 10px;
+}
+
+.player-win {
+    filter: sepia(100%) hue-rotate(270deg)
+}
+
+.player-lose {
+    filter: sepia(100%) hue-rotate(90deg)
+}
+
+#result {
+    font-size: 2rem;
+}
+
 #select-pokemon {
     display: grid;
     grid-template-columns: auto auto auto;
-    /* grid-template-rows: auto auto; */
+    grid-template-rows: auto;
     justify-content: center;
+}
+
+.hidden {
+    display: none;
 }

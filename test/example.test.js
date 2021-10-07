@@ -3,6 +3,10 @@ import { doesUserWin } from "../utilities.js";
 
 const test = QUnit.test;
 
+//
+//
+// Test for 'tie' condition
+
 test('User: grass, CPU: grass', (expect) => {
     const expected = 'tie';
     const actual = doesUserWin('grass', 'grass');
@@ -21,8 +25,9 @@ test('User: water, CPU: water', (expect) => {
     expect.equal(actual, expected);
 });
 
-
-
+//
+//
+// Test for 'win' condition
 
 test('User: grass, CPU: water', (expect) => {
     const expected = 'win';
@@ -42,8 +47,9 @@ test('User: water, CPU: fire', (expect) => {
     expect.equal(actual, expected);
 });
 
-
-
+//
+//
+// Test for 'lose' condition
 
 test('User: grass, CPU: fire', (expect) => {
     const expected = 'lose';
