@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { doesUserWin } from "../utilities.js";
+import { doesUserWin } from '../utilities.js';
 
 const test = QUnit.test;
 

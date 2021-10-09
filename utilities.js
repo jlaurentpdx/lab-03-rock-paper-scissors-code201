@@ -1,5 +1,5 @@
 export function doesUserWin(userChoice, cpuChoice) {
-    if (userChoice === cpuChoice){return 'tie'}
+    if (userChoice === cpuChoice){return 'tie';}
     else if (userChoice === 'grass' && cpuChoice === 'water'){return 'win';}
     else if (userChoice === 'fire' && cpuChoice === 'grass'){return 'win';}
     else if (userChoice === 'water' && cpuChoice === 'fire'){return 'win';}
