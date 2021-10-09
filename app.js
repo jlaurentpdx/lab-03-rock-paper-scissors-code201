@@ -9,6 +9,9 @@ const error = document.getElementById('error');
 const bulbImg = document.getElementById('bulb-img');
 const charImg = document.getElementById('char-img');
 const squiImg = document.getElementById('squi-img');
+const bulbSnd = document.getElementById('bulb-snd');
+const charSnd = document.getElementById('char-snd');
+const squiSnd = document.getElementById('squi-snd');
 
 let wins = 0;
 let losses = 0;
@@ -35,10 +38,13 @@ playButton.addEventListener('click', () => {
                 chosenLabel.classList.add(result);
             } else if (winner === 'grass') {
                 bulbImg.classList.add(result);
+                bulbSnd.play();
             } else if (winner === 'fire') {
                 charImg.classList.add(result);
+                charSnd.play();
             } else if (winner === 'water') {
                 squiImg.classList.add(result);
+                squiSnd.play();
             };
         }, 10);
     };
