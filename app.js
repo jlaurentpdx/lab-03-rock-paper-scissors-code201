@@ -19,12 +19,12 @@ let ties = 0;
 
 playButton.addEventListener('click', () => {
     const chosen = document.querySelector('input[type=radio]:checked');
-    const chosenLabel = chosen.parentNode;
      
     if (!chosen) {
         return error.classList.remove('hidden');
     }
     error.classList.add('hidden');
+    const chosenLabel = chosen.parentNode;
     const userChoice = chosen.value;
     const cpuChoice = getRandomChoice();
 
@@ -45,7 +45,7 @@ playButton.addEventListener('click', () => {
             } else if (winner === 'water') {
                 squiImg.classList.add(result);
                 squiSnd.play();
-            };
+            }
         }, 10);
     };
 
