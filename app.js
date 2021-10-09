@@ -28,12 +28,14 @@ playButton.addEventListener('click', () => {
         charImg.classList.remove('win');
         squiImg.classList.remove('win');
 
-        if (winner === 'grass') {
-            bulbImg.classList.add('win');} 
-        else if (winner === 'fire') {
-            charImg.classList.add('win');}
-        else if (winner === 'water') {
-            squiImg.classList.add('win');}
+        setTimeout(() => { 
+            if (winner === 'grass') {
+                bulbImg.classList.add('win');} 
+            else if (winner === 'fire') {
+                charImg.classList.add('win');}
+            else if (winner === 'water') {
+                squiImg.classList.add('win');}
+        }, 10);
     };
 
     if (doesUserWin(userChoice, cpuChoice) === 'tie'){
