@@ -16,6 +16,8 @@ let ties = 0;
 
 playButton.addEventListener('click', () => {
     const chosen = document.querySelector('input[type=radio]:checked');
+    const chosenLabel = chosen.parentNode;
+     
     if (!chosen) {
         return error.classList.remove('hidden');
     }
@@ -23,18 +25,21 @@ playButton.addEventListener('click', () => {
     const userChoice = chosen.value;
     const cpuChoice = getRandomChoice();
 
-    const applyAnimation = (winner) => {
-        bulbImg.classList.remove('win');
-        charImg.classList.remove('win');
-        squiImg.classList.remove('win');
-
+    const applyAnimation = (winner, result) => {
+        bulbImg.classList.remove('win', 'tie');
+        charImg.classList.remove('win', 'tie');
+        squiImg.classList.remove('win', 'tie');
+    
         setTimeout(() => { 
-            if (winner === 'grass') {
-                bulbImg.classList.add('win');} 
-            else if (winner === 'fire') {
-                charImg.classList.add('win');}
-            else if (winner === 'water') {
-                squiImg.classList.add('win');}
+            if (result === 'tie') {
+                chosenLabel.classList.add(result);
+            } else if (winner === 'grass') {
+                bulbImg.classList.add(result);
+            } else if (winner === 'fire') {
+                charImg.classList.add(result);
+            } else if (winner === 'water') {
+                squiImg.classList.add(result);
+            };
         }, 10);
     };
 
@@ -42,17 +47,17 @@ playButton.addEventListener('click', () => {
         ties++; tieCount.textContent = ties; 
         result.textContent = 'You tied!';
         result.style.color = 'lightgray';
-        applyAnimation(null);
+        applyAnimation(userChoice, 'tie');
     } else if (doesUserWin(userChoice, cpuChoice) === 'win') {
         wins++; winCount.textContent = wins; 
         result.textContent = 'You won!';
         result.style.color = 'green';
-        applyAnimation(userChoice);
+        applyAnimation(userChoice, 'win');
     } else {
         losses++; lossCount.textContent = losses; 
         result.textContent = 'You lost!';
         result.style.color = 'red';
-        applyAnimation(cpuChoice);
+        applyAnimation(cpuChoice, 'win');
     }
 });
 
